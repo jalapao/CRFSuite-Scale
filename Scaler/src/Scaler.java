@@ -40,9 +40,12 @@ public class Scaler {
 					count++;
 				}
 				if(count >= size){
+					bufferedWriter.flush();
 					break;
 				}
 			}
+			bufferedReader.close();
+			bufferedWriter.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
